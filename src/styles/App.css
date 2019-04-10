@@ -3,7 +3,11 @@
 }
 
 .fetching-state-container{
-  margin: 50% auto 0;
+  margin: 20% auto 0;
+  width: 50%;
+}
+.fetching-state-container h2 {
+  text-align: center;
 }
 
 .fetching-animation {
