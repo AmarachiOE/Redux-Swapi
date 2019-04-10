@@ -21,7 +21,8 @@ export const getCharacters = () => dispatch => {
         console.log("API request SUCCESSFUL", res.data);
         dispatch({
             type: SUCCESS,
-            payload: res.data
+            payload: res.data.results 
+            // console logging shows that the actual data is on the "results" property/key of the res.data object, so that's what we want. Could also use action.payload.results on the reducer instead of referencing results here on the action creator
         });
     })
     .catch( err => {

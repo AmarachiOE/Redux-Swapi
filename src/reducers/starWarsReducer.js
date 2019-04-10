@@ -19,7 +19,7 @@ export const charsReducer = (state = initialState, action) => {
     case SUCCESS:
     return {
       ...state,
-      characters: action.payload,
+      characters: action.payload, // or could change be action.payload.results and on action creator make payload: res.data (read comment on action creator)
       isFetching: false,
       error: null
     };
