@@ -18,12 +18,14 @@ export const getCharacters = () => dispatch => {
     // then start API call
     axios.get("https://swapi.co/api/people/")
     .then( res => {
+        console.log("API request SUCCESSFUL", res.data);
         dispatch({
             type: SUCCESS,
             payload: res.data
         });
     })
     .catch( err => {
+        console.log("API request FAILED", err.resolve);
         dispatch({
             type: FAILURE,
             payload: err
